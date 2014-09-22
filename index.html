@@ -25,34 +25,58 @@
 	
 	<script>
 
-		var map = L.map('map').setView([45.53311, -122.66613], 14);
+		var map = L.map('map').setView([45.52517, -122.66759], 14);
 
-		// add an OpenStreetMap tile layer
-      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 		
 		// Brewery Markers
 		L.marker([45.53484,-122.65006], {icon: L.AwesomeMarkers.icon({icon: 'beer', markerColor: '#a15f3e', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
-			.bindPopup("<b>McMenamins Broadway Pub</b><br />First night/Last night spot");
+			.bindPopup("<b><a href='www.mcmenamins.com'>McMenamins Broadway Pub</a></b><br />First night/Last night spot");
 		L.marker([45.5246, -122.6819],  {icon: L.AwesomeMarkers.icon({icon: 'beer', markerColor: '#a15f3e', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
-			.bindPopup("<b>Deschutes Brewery Portland Public House</b><br />Pretzel with Jalapeno Pesto Cheese Dip");
+			.bindPopup("<b><a href='www.deschutesbrewery.com/locations/portland'>Deschutes Brewery Portland Public House</a></b><br />Pretzel with Jalapeno Pesto Cheese Dip");
 		L.marker([45.52312, -122.65802], {icon: L.AwesomeMarkers.icon({icon: 'beer', markerColor: '#a15f3e', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
-			.bindPopup("<b>Burningside Brewing Company</b><br />Nitro Oktoberfest!");
+			.bindPopup("<b><a href='www.burnsidebrewco.com/'>Burningside Brewing Company</a></b><br />Nitro Oktoberfest!");
 		L.marker([45.54112, -122.67654], {icon: L.AwesomeMarkers.icon({icon: 'beer', markerColor: '#a15f3e', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
-			.bindPopup("<b>Widmer Brothers Brewing Company</b><br />Love the Drop Top Amber Ale");
+			.bindPopup("<b><a href='widmerbrothers.com'>Widmer Brothers Brewing Company</a></b><br />Love the Drop Top Amber Ale");
 				
 		// Restaurant Markers
-		L.marker([45.521705, -122.677079], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'green', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
-			.bindPopup("<b>The Original</b><br />Chicken and Waffles");
-		L.marker([45.529860, -122.681371], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'green', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
-			.bindPopup("<bYama</b><br />Seafood Udon...with octopus");
-		L.marker([45.529860, -122.681371], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'green', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
-			.bindPopup("<bYama</b><br />Seafood Udon...with octopus");
-		L.marker([45.518612, -122.661030], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'green', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
-			.bindPopup("<b>Slow Bar</b><br />Best burger in Portland");			
-		L.marker([45.522884, -122.641683], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'green', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
-			.bindPopup("<b>Screen Door</b><br />Jumbalaya/Mac & Cheese combo");			
+		L.marker([45.521705, -122.677079], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'blue', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='originaldinerant.com'>The Original</a></b><br />Chicken and Waffles");
+		L.marker([45.529860, -122.681371], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'blue', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='yamasushiandsakebar.com'>Yama</a></b><br />Seafood Udon...with octopus");
+		L.marker([45.518612, -122.661030], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'blue', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='slowbar.net'>Slow Bar</a></b><br />Best burger in Portland");			
+		L.marker([45.522884, -122.641683], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'blue', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='www.screendoorrestaurant.com/'>Screen Door</a></b><br />Jumbalaya/Mac & Cheese combo");			
+		L.marker([45.53015, -122.65986], {icon: L.AwesomeMarkers.icon({icon: 'cutlery', markerColor: 'blue', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='www.jcafepdx.com/'>J Cafe</a></b><br />Awesome Breakfast Panini");	
+			
+		// Other places
+		L.marker([45.523344, -122.681586], {icon: L.AwesomeMarkers.icon({icon: 'book', markerColor: 'orange', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='www.powells.com/'>Powell's Books</a></b><br />A book store the size of a city block!");	
+		L.marker([45.522558, -122.673447], {icon: L.AwesomeMarkers.icon({icon: 'coffee', markerColor: 'orange', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='voodoodoughnut.com'>Voodoo Donut</a></b><br /><img height=100 width=100 src='http://magazine.foxnews.com/sites/magazine.foxnews.com/files/styles/700_image/public/VoodooDoughnut.jpg?itok=liaqCfOn'>");		
+		L.marker([45.524325, -122.650533], {icon: L.AwesomeMarkers.icon({icon: 'coffee', markerColor: 'orange', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='voodoodoughnut.com'>Voodoo Donut Too</a></b><br /><img height=100 width=100 src='http://upload.wikimedia.org/wikipedia/commons/3/39/Bacon_donut.jpg'>");		
+		L.marker([45.504766, -122.630982], {icon: L.AwesomeMarkers.icon({icon: 'smile-o', markerColor: 'orange', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='http://saltandstraw.com'>Salt & Straw</a></b><br />weird - but good - ice cream");			
+		L.marker([45.5234, -122.6705], {icon: L.AwesomeMarkers.icon({icon: 'exclamation-circle', markerColor: 'orange', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b>White Stag Sign</b><br /><img height=100 width=100 src='http://upload.wikimedia.org/wikipedia/commons/c/ce/MadeinOregonsign.jpg'>");					
+			
+		L.marker([45.5286, -122.6632], {icon: L.AwesomeMarkers.icon({icon: 'building', markerColor: 'purple', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b>Oregon Convention Center</b><br />");	
+		L.marker([45.5128, -122.6853], {icon: L.AwesomeMarkers.icon({icon: 'desktop', markerColor: 'purple', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b>Portland State University</b><br />Workshops Location");		
+		L.marker([45.5304, -122.65522], {icon: L.AwesomeMarkers.icon({icon: 'suitcase', markerColor: 'purple', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b>Doubletree Hotel</b><br />");	
+	
+		L.marker([45.5283, -122.6804], {icon: L.AwesomeMarkers.icon({icon: 'music', markerColor: 'green', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='www.ecotrust.org/project/natural-capital-center/'>Natural Capital Center</a></b><br />");
+		L.marker([45.5106, -122.7179], {icon: L.AwesomeMarkers.icon({icon: 'music', markerColor: 'green', prefix: 'fa', iconColor: 'black'}) }).addTo(map)
+			.bindPopup("<b><a href='www.worldforestry.org/'>World Forestry Center</a></b><br />");			
+
 			
 		var popup = L.popup();
 		
